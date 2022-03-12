@@ -1,36 +1,41 @@
+@import "../../utilities/variables";
+
 .container {
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
 
   &__card {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    width: 100%;
+    background-color: $white-color;
+    display: flex;
     height: 100px;
+    justify-content: space-between;
+    width: 100%;
   }
+
   &__image {
     height: auto;
-    width: 150px;
     max-width: 150px;
+    width: 150px;
   }
+
   &__title {
-    color: #997690;
-    font-size: 1.2rem;
+    color: $main-color;
+    font-size: $main-text;
     font-weight: 700;
     text-align: end;
     padding-right: 20px;
   }
+
   &__subtitle {
-    font-size: 1rem;
+    font-size: $secundary-text;
     font-weight: 400;
   }
 }
 
 .header {
-  background-color: #782b90;
+  background-color: $main-color;
   height: 290px;
   width: 100%;
 
@@ -40,11 +45,11 @@
   }
 
   &__title {
-    color: #fff;
-    font-size: 1.6rem;
+    color: $white-color;
+    font-size: $title-text;
+    line-height: 2rem;
     padding-left: 15px;
     padding-top: 15px;
-    line-height: 2rem;
   }
 
   &__image {
@@ -56,50 +61,198 @@
   height: 140px;
   width: 100%;
   padding-top: 10px;
+
   &__title {
+    color: $main-color;
+    font-weight: bold;
     text-align: center;
-    font-weight: 600;
-    color: #782b90;
   }
+
   &__paragraph {
+    line-height: normal;
     text-align: center;
     padding: 0 50px;
-    line-height: normal;
   }
 }
 
 .warning {
-  height: 140px;
+  background: $main-color;
   display: grid;
   grid-template-columns: 0.5fr 1fr;
-  width: 100%;
+  height: 140px;
   padding-top: 10px;
-  background: #782b90;
+  width: 100%;
 
   &__image {
-    justify-items: end;
     display: grid;
+    justify-items: end;
   }
 
   &__img {
-    width: 40%;
-    padding-right: 30px;
     margin-top: 10px;
+    padding-right: 30px;
+    width: 40%;
   }
 
   &__title {
-    color: #fff;
-    text-align: left;
-    font-size: 1.2rem;
-    font-weight: 600;
+    color: $white-color;
+    font-size: $main-text;
+    font-weight: bold;
     letter-spacing: 2px;
+    text-align: left;
   }
 
   &__subtitle {
-    color: #fff;
-    font-size: 1rem;
+    color: $white-color;
+    font-size: $secundary-text;
     padding-right: 50px;
   }
+}
+
+.protect img {
+  height: auto;
+  max-width: 62px;
+  width: 60px;
+}
+
+.protect {
+  display: grid;
+  grid-template-areas:
+    "head head"
+    "call calltext"
+    "cellphone celltext"
+    "safe safetext"
+    "footer footer";
+  grid-template-columns: 0.5fr 1fr;
+
+  &__header {
+    color: $main-color;
+    font-size: $main-text;
+    font-weight: bold;
+    grid-area: head;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  &__nav-image {
+    align-self: center;
+    display: grid;
+    grid-area: call;
+    justify-self: center;
+    padding-top: 20px;
+  }
+
+  &__nav-text {
+    grid-area: calltext;
+    padding-top: 20px;
+    padding-right: 40px;
+    font-size: $secundary-text;
+  }
+
+  &__cellphone {
+    align-self: center;
+    display: grid;
+    grid-area: cellphone;
+    justify-self: center;
+    padding-top: 30px;
+  }
+
+  &__cellphone-text {
+    grid-area: celltext;
+    font-size: $secundary-text;
+    padding-top: 30px;
+    padding-right: 40px;
+  }
+
+  &__safe {
+    align-self: center;
+    display: grid;
+    grid-area: safe;
+    justify-self: center;
+    padding-top: 20px;
+  }
+
+  &__safe-text {
+    grid-area: safetext;
+    font-size: $secundary-text;
+    padding-top: 20px;
+    padding-right: 40px;
+  }
+
+  &__footer {
+    grid-area: footer;
+    font-size: 1rem;
+    padding: 40px 50px 10px 60px;
+  }
+
+  &__footer-title {
+    color: $main-color;
+    font-size: $secundary-text;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__footer-subtitle {
+    font-size: $secundary-text;
+    padding: 0 70px 10px 70px;
+    text-align: center;
+  }
+
+  &__footer span {
+    color: $red-color;
+  }
+}
+.doubt {
+  text-align: center;
+  margin-top: 20px;
+
+  &__title {
+    color: $main-color;
+    font-size: $main-text;
+    text-align: center;
+  }
+
+  &__nowmore {
+    color: $red-color;
+    font-size: $secundary-text;
+    text-decoration: underline;
+  }
+
+  &__contact {
+    font-size: $secundary-text;
+    padding-top: 25px;
+  }
+
+  &__url {
+    color: $main-color;
+    text-decoration: none;
+    font-size: $secundary-text;
+  }
+}
+
+.social {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.social img {
+  height: 27px;
+}
+
+hr {
+  width: 90%;
+}
+
+.policy {
+  color: $main-color;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.policy a {
+  text-decoration: none;
 }
 
 /*movil*/
@@ -112,6 +265,7 @@
       flex-direction: column;
       height: 120px;
     }
+
     &__title {
       font-size: 1rem;
       text-align: center;
@@ -122,6 +276,7 @@
     &__sentence {
       display: block;
     }
+
     &__image {
       width: 280px;
       position: relative;
@@ -131,5 +286,69 @@
 
   .content {
     margin-top: 28px;
+
+    &__paragraph {
+      padding: 0;
+    }
+  }
+
+  .warning {
+    grid-template-columns: 1fr;
+    height: 250px;
+
+    &__image {
+      justify-items: center;
+    }
+
+    &__img {
+      width: 80px;
+      height: auto;
+      padding: 0;
+    }
+
+    &__card {
+      text-align: left;
+      padding: 0 15px;
+    }
+
+    &__subtitle {
+      padding: 0;
+    }
+  }
+
+  .protect {
+    grid-template-areas:
+      "head"
+      "call"
+      "calltext"
+      "cellphone"
+      "celltext"
+      "safe"
+      "safetext"
+      "footer"
+      "footer";
+    grid-template-columns: 1fr;
+
+    padding: 0 30px;
+
+    &__header {
+      padding: 20px 20px 0 20px;
+    }
+
+    &__nav-text {
+      padding: 0px;
+    }
+
+    &__cellphone-text {
+      padding: 0px;
+    }
+
+    &__safe-text {
+      padding: 0px;
+    }
+
+    &__footer {
+      padding: 40px 0 0 0;
+    }
   }
 }
