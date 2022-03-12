@@ -267,7 +267,7 @@ hr {
     }
 
     &__title {
-      font-size: 1rem;
+      font-size: $secundary-text;
       text-align: center;
     }
   }
@@ -336,19 +336,26 @@ hr {
     }
 
     &__nav-text {
-      padding: 0px;
+      padding: 20px 0 0 0;
     }
 
     &__cellphone-text {
-      padding: 0px;
+      padding: 20px 0 0 0;
     }
 
     &__safe-text {
-      padding: 0px;
+      padding: 20px 0 0 0;
     }
 
     &__footer {
       padding: 40px 0 0 0;
+    }
+  }
+
+  .protect {
+    &__footer-subtitle {
+      font-size: 14px;
+      padding: 0 30px;
     }
   }
 }
